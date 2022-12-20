@@ -13,9 +13,10 @@
         "url": "https://vkbcontrollers.com/?page_id=4609",
         "regex": "https://vkbcontrollers.com/wp-content/uploads/(?<year>[\\d]+)/(?<month>[\\d]+)/VKBDevCfg-C_v?([\\d.]+).zip"
     },
+    "pre_install": "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | % { Rename-Item $_.Fullname 'VKBDevCfg-C.exe' }",
     "shortcuts": [
         [
-            "VKBDevCfg-C_v$version.exe",
+            "VKBDevCfg-C.exe",
             "VKB Device Config"
         ]
     ],
