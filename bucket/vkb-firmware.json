@@ -1,0 +1,24 @@
+{
+    "version": "2.12.2",
+    "description": "VKB controllers firmwares",
+    "homepage": "https://vkbcontrollers.com/?page_id=4609",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://vkbcontrollers.com/wp-content/uploads/2022/11/v2_12_2.zip",
+            "hash": "a22867abb7279d0ba6589b10ee4dd8c3f6339e2616c6d9ecfdea41ad744bd2c3",
+            "extract_dir": "$version"
+        }
+    },
+    "checkver": {
+        "url": "https://vkbcontrollers.com/?page_id=4609",
+        "regex": "<a href=\"https://vkbcontrollers.com/wp-content/uploads/(?<year>[\\d]+)/(?<month>[\\d]+)/v[\\d_]+.zip\" target=\"_blank\" rel=\"noopener\">VKB Device Firmware \\(v?([\\d.]+)\\)</a>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://vkbcontrollers.com/wp-content/uploads/$matchYear/$matchMonth/v$majorVersion_$minorVersion_$patchVersion.zip"
+            }
+        }
+    }
+}
