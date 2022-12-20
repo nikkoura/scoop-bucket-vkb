@@ -13,12 +13,19 @@
         "url": "https://vkbcontrollers.com/?page_id=4609",
         "regex": "https://vkbcontrollers.com/wp-content/uploads/(?<year>[\\d]+)/(?<month>[\\d]+)/VKBDevCfg-C_v?([\\d.]+).zip"
     },
-    "pre_install": "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | % { Rename-Item $_.Fullname 'VKBDevCfg-C.exe' }",
+    "pre_install": [
+        "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | % { Rename-Item $_.Fullname 'VKBDevCfg-C.exe' }",
+        "$null = New-Item -Path $dir -Name zconfig.ini -ItemType File"
+    ],
     "shortcuts": [
         [
             "VKBDevCfg-C.exe",
             "VKB Device Config"
         ]
+    ],
+    "persist": [
+        "zconfig.ini",
+        "configs"
     ],
     "autoupdate": {
         "architecture": {
