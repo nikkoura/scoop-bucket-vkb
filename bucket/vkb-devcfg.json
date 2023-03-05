@@ -3,6 +3,7 @@
     "description": "VKB controllers configuration software",
     "homepage": "https://www.vkbcontrollers.com/pages/downloads",
     "license": "Proprietary",
+    "depends": "megatools",
     "architecture": {
         "64bit": {
             "url": "https://cdn.shopify.com/s/files/1/0551/4739/7238/files/VKBDevCfg-C_v0.92.51.zip",
@@ -15,12 +16,17 @@
     },
     "pre_install": [
         "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | % { Rename-Item $_.Fullname 'VKBDevCfg-C.exe' }",
-        "$null = New-Item -Path $dir -Name zconfig.ini -ItemType File"
+        "$null = New-Item -Path $dir -Name zconfig.ini -ItemType File",
+        "megatools dl --path=$dir https://mega.nz/folder/ghtAlCTD#0br8bLP0UEWIv9BIkewI2g/file/kh8lDaZQ"
     ],
     "shortcuts": [
         [
             "VKBDevCfg-C.exe",
             "VKB Device Config"
+        ],
+        [
+            "controller2_17En.pdf",
+            "VKB Device Config documentation"
         ]
     ],
     "persist": [
