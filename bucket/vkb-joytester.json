@@ -19,12 +19,12 @@
     "persist": "VKB_JoyTester.ini",
     "checkver": {
         "url": "https://www.vkbcontrollers.com/pages/downloads",
-        "regex": "(?<installer>https://cdn\\.shopify\\.com/s/files/[0-9/]+/files/VKB_JoyTester\\.zip\\?v=([0-9]+))"
+        "regex": "https://(?<installer>cdn\\.shopify\\.com/s/files/[0-9/]+/files/VKB_JoyTester\\.zip\\?v=([0-9]+))"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchInstaller"
+                "url": "https://$matchInstaller"
             }
         }
     }
