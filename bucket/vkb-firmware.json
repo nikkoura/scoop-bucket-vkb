@@ -1,5 +1,5 @@
 {
-    "version": "2.16.5",
+    "version": "0.92.88.1/0551/4739/7238.${3}",
     "description": "VKB controllers firmwares",
     "homepage": "https://www.vkbcontrollers.com/pages/downloads",
     "license": "Proprietary",
@@ -16,6 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
+                
             }
         }
     }
