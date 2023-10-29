@@ -17,7 +17,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                
+                "url": "https://cdn.shopify.com/s/files/1/0551/4739/7238/files/v$majorVersion_$minorVersion_$patchVersion.zip"
             }
         }
     }
