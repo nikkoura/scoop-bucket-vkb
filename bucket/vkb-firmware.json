@@ -1,5 +1,5 @@
 {
-    "version": "0.92.88.1/0551/4739/7238.${3}",
+    "version": "2.16.5",
     "description": "VKB controllers firmwares",
     "homepage": "https://www.vkbcontrollers.com/pages/downloads",
     "license": "Proprietary",
@@ -11,6 +11,7 @@
     },
     "checkver": {
         "url": "https://www.vkbcontrollers.com/pages/downloads",
+        "regex": "https://cdn.shopify.com/s/files/1/0551/4739/7238/files/v?([\\d]+)_?([\\d]+)_?([\\d]+).zip",
         "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {
